@@ -54,6 +54,6 @@ Requests are used to retrieve specific resource from a web server. The web serve
 
 The request structure consist of 3 main parts: Request line, Request Headers, and Request Message Body. 
 
-- *Request Line*: Consists in a *HTTP Method (GET, POST, UPDATE, etc)* and the resource requested from the web server: ´´´ GET / HTTP /1.1´´´ (The / means that the main page is being requested).
+- *Request Line*: Consists in a *HTTP Method (GET, POST, UPDATE, etc)* and the resource requested from the web server: ` GET / HTTP /1.1` (The / means that the main page is being requested).
 - *Request Headers*: List of different parameters used to identify the request. 
 	- Host Header: Modern web apps usually belong to more than one domain, therefore the *"Host"* header to identify which domain requested the resource.
