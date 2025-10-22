@@ -57,3 +57,6 @@ The request structure consist of 3 main parts: Request line, Request Headers, an
 - *Request Line*: Consists in a *HTTP Method (GET, POST, UPDATE, etc)* and the resource requested from the web server: ` GET / HTTP /1.1` (The / means that the main page is being requested).
 - *Request Headers*: List of different parameters used to identify the request. 
 	- Host Header: Modern web apps usually belong to more than one domain, therefore the *"Host"* header to identify which domain requested the resource.
+	- Cookie Header: Web applications often store information on the client's device using "cookies", these typically store session information to make the user's flow much smoother.
+	- Upgrade-Insecure-Requests Header: Indicates if the client wants to communicate using encryption (SSL).
+	- User-Agent Header: Information about the client's browser and OS. 
