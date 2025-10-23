@@ -56,7 +56,14 @@ The request structure consist of 3 main parts: Request line, Request Headers, an
 
 - *Request Line*: Consists in a *HTTP Method (GET, POST, UPDATE, etc)* and the resource requested from the web server: ` GET / HTTP /1.1` (The / means that the main page is being requested).
 - *Request Headers*: List of different parameters used to identify the request. 
-	- Host Header: Modern web apps usually belong to more than one domain, therefore the *"Host"* header to identify which domain requested the resource.
+	- Host Header: Modern web apps usually belong to more than one domain, therefore the *"Host"* header to identify which domain requested the resource. `(letsdefend.io)`
 	- Cookie Header: Web applications often store information on the client's device using "cookies", these typically store session information to make the user's flow much smoother.
-	- Upgrade-Insecure-Requests Header: Indicates if the client wants to communicate using encryption (SSL).
-	- User-Agent Header: Information about the client's browser and OS. 
+	- Upgrade-Insecure-Requests Header: Indicates if the client wants to communicate using encryption (SSL).`(Usually 1)`
+	- User-Agent Header: Information about the client's browser and OS. Web server will use this information to send specific HTTP responses to the client.`(Mozilla/5.0 (Windows NT 10.0; Win64; x64)Chrome/97.0.4692.71)`
+	- Accept Heaeder: Here the type of data requested is specified `(text/html,application/xhtml+xml,application/xml;q=0.9,image/avif)`
+	- Accept-Encoding Header: The type of encoding supported by the client, specified as compression algorithms. `(gzip, deflate)`
+	- Accept-Language Header: It's the client's language information, this will affect how the web server displays the prepared content in that specific language. `(en-US, en;q=0.9)`.
+	- Connection Header: This header shows how the HTTP connection is made. If is "close", the TCP connection will be closed after receiving the HTTP resonse. If is "keep-alive", the connection will be maintained. `(close)`
+
+- For closing the *Request Headers* an empty line is used to separate sections.
+- Remaining data to be sent will be specified in the Request Message Body. If the method POST is used, its parameters can be found here.
