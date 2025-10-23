@@ -54,8 +54,8 @@ Requests are used to retrieve specific resource from a web server. The web serve
 
 The request structure consist of 3 main parts: Request line, Request Headers, and Request Message Body. 
 
-- *Request Line*: Consists in a *HTTP Method (GET, POST, UPDATE, etc)* and the resource requested from the web server: ` GET / HTTP /1.1` (The / means that the main page is being requested).
-- *Request Headers*: List of different parameters used to identify the request. 
+- **Request Line**: Consists in a *HTTP Method (GET, POST, UPDATE, etc)* and the resource requested from the web server: ` GET / HTTP /1.1` (The / means that the main page is being requested).
+- **Request Headers**: List of different parameters used to identify the request. 
 	- Host Header: Modern web apps usually belong to more than one domain, therefore the *"Host"* header to identify which domain requested the resource. `(letsdefend.io)`
 	- Cookie Header: Web applications often store information on the client's device using "cookies", these typically store session information to make the user's flow much smoother.
 	- Upgrade-Insecure-Requests Header: Indicates if the client wants to communicate using encryption (SSL).`(Usually 1)`
@@ -65,4 +65,4 @@ The request structure consist of 3 main parts: Request line, Request Headers, an
 	- Accept-Language Header: It's the client's language information, this will affect how the web server displays the prepared content in that specific language. `(en-US, en;q=0.9)`.
 	- Connection Header: This header shows how the HTTP connection is made. If is "close", the TCP connection will be closed after receiving the HTTP resonse. If is "keep-alive", the connection will be maintained. `(close)`
   - Closing the *Request Headers* is done with an empty line to separate sections.
-- Request Message Body: Remaining data to be sent will be specified in the Request Message Body. If the method POST is used, its parameters can be found here.
+- **Request Message Body**: Remaining data to be sent will be specified in the Request Message Body. If the method POST is used, its parameters can be found here.
